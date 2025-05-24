@@ -1,0 +1,116 @@
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.profile img {
+  margin-top: 100px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+}
+
+.profile h1 {
+  text-align: center;
+  width: 70%;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.profile h1 span {
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* fallback for non-webkit browsers */
+  color: transparent; /* ensure full transparency */
+}
+
+.profile p {
+  margin-top: -40px;
+  width: 50%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.profile-action {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.profile-connect {
+  padding: 20px 40px;
+  border-radius: 50px; /* '50x' is a typo */
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.6%);
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.profile-connect:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.my-resume {
+  padding: 20px 40px;
+  border-radius: 50px; /* '50x' is a typo */
+  background: transparent;
+  border: solid 1px #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.my-resume:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    width: 100%;
+    padding: 0 16px; /* add horizontal padding instead of relying on margins */
+    box-sizing: border-box;
+  }
+
+  .profile img {
+    margin-bottom: 80px;
+    width: 200px;
+  }
+
+  .profile h1 {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .profile p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 10px 0;
+  }
+
+  .profile-action {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+  }
+
+  .profile-connect,
+  .my-resume {
+    padding: 15px 25px;
+    font-size: 14px;
+  }
+}
+
