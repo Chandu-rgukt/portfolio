@@ -127,6 +127,37 @@
   transform: scale(1.05);
 }
 
+.contact-social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-social-link:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-social-icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .contact {
     padding: 30px 16px;

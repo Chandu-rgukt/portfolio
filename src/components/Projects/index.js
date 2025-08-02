@@ -1,4 +1,5 @@
 import './index.css'
+import useScrollAnimation from '../../hooks/useScrollAnimation'
 
 const projects = [
   {
@@ -73,21 +74,25 @@ const projects = [
   },
 ]
 
-const Projects = () => (
-  <div className="mywork">
-    <div className="projects-title">
-      <h1>My Works</h1>
+const Projects = () => {
+  const projectsRef = useScrollAnimation()
+
+  return (
+    <div className="mywork slide-in-right" ref={projectsRef}>
+      <div className="projects-title fade-in">
+        <h1>My Works</h1>
+      </div>
+      <div className="projects-list">
+        {projects.map(project => (
+          <div key={project.id} className="project-item">
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <img src={project.image} alt={project.title} />
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
-    <div className="projects-list">
-      {projects.map(project => (
-        <div key={project.id} className="project-item">
-          <a href={project.link} target="_blank" rel="noopener noreferrer">
-            <img src={project.image} alt="" />
-          </a>
-        </div>
-      ))}
-    </div>
-  </div>
-)
+  )
+}
 
 export default Projects

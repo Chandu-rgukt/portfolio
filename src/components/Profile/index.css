@@ -44,34 +44,37 @@
   margin-bottom: 50px;
 }
 
-.profile-connect {
+.profile-connect,
+.my-resume {
   padding: 20px 40px;
-  border-radius: 50px; /* '50x' is a typo */
-  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.6%);
+  border-radius: 50px;
   font-size: 22px;
   cursor: pointer;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.profile-connect {
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.6%);
   margin-left: 40px;
 }
 
 .profile-connect:hover {
   opacity: 0.9;
   transform: scale(1.05);
-  transition: all 0.3s ease;
 }
 
 .my-resume {
-  padding: 20px 40px;
-  border-radius: 50px; /* '50x' is a typo */
   background: transparent;
   border: solid 1px #ffffff;
-  font-size: 22px;
-  cursor: pointer;
 }
 
 .my-resume:hover {
   opacity: 0.9;
   transform: scale(1.05);
-  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -111,6 +114,9 @@
   .my-resume {
     padding: 15px 25px;
     font-size: 14px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
   }
 }
-
